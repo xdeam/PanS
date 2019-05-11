@@ -2,6 +2,10 @@ package login.controller;
 
 
 import com.alibaba.fastjson.JSON;
+import filecenter.service.DeptService;
+import filecenter.utils.PanResult;
+import filecenter.utils.Utils;
+import login.model.Dept;
 import login.model.User;
 import login.service.LoginService;
 import login.utils.CookieUtils;
@@ -30,6 +34,7 @@ public class LoginController {
             if (user != null) {
                 CookieUtils.addCookie("token", accessToken);
                 CookieUtils.addCookie("uid", user.getUid());
+                Utils.saveUser(user);
                 //panResult.success(null);
                 return "success";
             } else {
@@ -43,5 +48,14 @@ public class LoginController {
             return "error";
         }
 
+    }
+
+    @RequestMapping(value = "userInfo", method = {RequestMethod.GET})
+    @ResponseBody
+    public PanResult getUserInfo(){
+        PanResult panResult=new PanResult();
+        User user=Utils.getUser();
+        panResult.success(user);
+        return panResult;
     }
 }

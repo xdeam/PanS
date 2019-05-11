@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+
+    <title>云盘</title>
+
+    <link href="../assert/btsp/css/bootstrap.min.css" rel="stylesheet">
+    <link href="top.css" rel="stylesheet">
+    <link href="left.css" rel="stylesheet">
+    <link href="middle.css" rel="stylesheet">
+    <link href="right.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <script src="../assert/jquery-3.3.1.min.js"></script>
+    <script src="../assert/btsp/js/bootstrap.min.js"></script>
+   
+    <nav class="navbar navbar-default" id="menu">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <a class="navbar-brand" id="logo"><b id="en">FileCenter</b> 企业文件中心</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           
+                <ul class="nav navbar-nav navbar-right">
+                  <li id="round" ><a href="#">杜</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">经理部:杜甫<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">设置</a></li>
+                      
+                     
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">注销</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                  
+                <form class="navbar-form ">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="搜索文件">
+                    </div>
+                    <button type="submit" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
+                  </form>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+
+    <div id="left" class="container-fluid">
+            <div class="row" >
+                <div class="col-md-2" style="padding-left:0px;">
+                    <ul id="main-nav" class="nav nav-tabs nav-stacked" style="float: left;height:100%;">
+                     
+                        <li>
+                            <a href="#entspace" class="nav-header" data-toggle="collapse" aria-expanded="true">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                 企业空间
+                                <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul id="entspace" class="nav nav-list secondmenu collapse in" aria-expanded="true" style="">
+                                <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                            </ul>
+                        </li>
+        
+                        <li>
+                            <a href="#myspace" class="nav-header collapsed" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-user"></i>
+                                 个人文件
+                                <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul id="myspace" class="nav nav-list collapse secondmenu">
+                                <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                            </ul>
+                        </li>
+        
+                        <li>
+                            <a href="#sharespace" class="nav-header collapsed" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-share"></i>
+                                 分享的文件
+                                <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul id="sharespace" class="nav nav-list collapse secondmenu">
+                                <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                            </ul>
+                        </li>
+        
+        
+                        <!-- 收到的共享  -->
+                        <li>
+                            <a href="#giftspace" class="nav-header collapsed" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-gift"></i>
+                                 收到的分享
+                                <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul id="giftspace" class="nav nav-list collapse secondmenu">
+                                <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                            </ul>
+                        </li>
+        
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                        <div id="mi">
+
+   
+                                <ol class="breadcrumb" style="background:white;">
+                                        <li><a href="#">企业空间</a></li>
+                                        <li><a href="#">产品</a></li>
+                                        <li class="active">2018</li>
+                                      </ol>
+                            <hr>
+                            <div class="slopt" style="margin-left:40px;">
+                                    <button type="button" class="btn btn-info">
+                                        下载
+                                    </button>
+                                    <button type="button" class="btn btn-warning">
+                                            分享
+                                     </button>
+                                     <button type="button" class="btn btn-success">
+                                            移动
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                            删除
+                                         </button>
+                            </div>
+                                 <table class="table table-hover">
+                                    <thead>
+                                        <th><input type="checkbox" id="sall"> </th> <th>项目名称
+                        
+                                        </th> 
+                                        <th>修改/创建时间</th> <th>上传者</th> <th>所在目录</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                              <td><div class="ics default"></div>
+                                                 <span class="txt">
+                                                    <a href="#">产品方案说明</a>
+                                                 </span> 
+                                                    <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                                                      
+                                                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                                          </div></td> 
+                                               <td>2019-3-14 8:38</td>  
+                                               <td>我</td>
+                                               <td>产品目录</td>
+                                        </tr>
+                        
+                                        <tr>
+                                                <td><input type="checkbox"></td>
+                                                  <td><div class="ics folder"></div>
+                                                     <span class="txt">
+                                                        <a href="#">产品方案说明文件夹</a>
+                                                     </span> 
+                                                        <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                                                          
+                                                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                                              </div></td> 
+                                                   <td>2019-3-14 8:38</td>  
+                                                   <td>我</td>
+                                                   <td>产品目录</td>
+                                            </tr>
+                                            <tr>
+                                                    <td><input type="checkbox"></td>
+                                                      <td><div class="ics doc"></div>
+                                                         <span class="txt">
+                                                            <a href="#">产品方案说明.doc</a>
+                                                         </span> 
+                                                            <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                                                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                                                              
+                                                                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                                                  </div></td> 
+                                                       <td>2019-3-14 8:38</td>  
+                                                       <td>我</td>
+                                                       <td>产品目录</td>
+                                                </tr>
+                                                <tr>
+                                                        <td><input type="checkbox"></td>
+                                                          <td><div class="ics ppt"></div>
+                                                             <span class="txt">
+                                                                <a href="#">产品方案说明.ppt</a>
+                                                             </span> 
+                                                                <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                                                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                                                                  
+                                                                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                                                      </div></td> 
+                                                           <td>2019-3-14 8:38</td>  
+                                                           <td>我</td>
+                                                           <td>产品目录</td>
+                                                    </tr>
+                                
+                                    </tbody>
+                                 </table>    
+                             <script src="../assert/jquery-3.3.1.min.js"></script>
+                            <script src="../assert/btsp/js/bootstrap.min.js"></script>
+                            <script src="middle.js"></script>
+                           </div>
+                </div>
+                <div class="col-md-2">
+                        <div class="row" id="right">
+                                <div class="col-sm-6 col-md-4">
+                                  <div class="thumbnail">
+                                  
+                                    <div class="caption" id="inner">
+                                    <p style="height:5%"> 
+                        
+                                    </p>
+                                     
+                                      <p>
+                                          <div class="bttns">
+                                                <a href="#" class="btn btn-primary" id="upload" role="button">上传</a>
+                                                <!-- <a href="#" class="btn btn-default" role="button">新建</a> -->
+                                                <div class="btn-group" style="float:right;">
+                                                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                         新建 <span class="caret"></span>
+                                                       </button>
+                                                       <ul class="dropdown-menu">
+                                                         <li><a href="#">文件</a></li>
+                                                    
+                                                         <li role="separator" class="divider"></li>
+                                                         <li><a href="#">文件夹</a></li>
+                                                       </ul>
+                                                     </div>
+                        
+                                          </div>
+                                        
+                                    </p>
+                                    <div class="">
+                                           
+                                            <hr class="mt-0">
+                                            <ul class="icons-list">
+                                                <li>
+                                                    <i class="bg-primary img-circle">产</i>
+                                                    <div class="desc">
+                                                        <div class="title">产品部</div>
+                                                        <small>上传 下载</small>
+                                                    </div>
+                                                    
+                                                </li>
+                                              
+                                            </ul>
+                                        </div>
+                                    <!-- <table class="table table-hover">
+                                            <thead>
+                                              <tr>
+                                               
+                                                <th  >共享</th>
+                                               
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry</td>
+                                               
+                                              </tr>
+                                            </tbody>
+                                          </table> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+            </div>
+        </div>
+
+ 
+   </body>
+</html>

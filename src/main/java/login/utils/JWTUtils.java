@@ -25,7 +25,7 @@ import io.jsonwebtoken.UnsupportedJwtException;
  */
 public class JWTUtils {
 
-    static String SECRETKEY = "nimadetou";
+    static String SECRETKEY = "key";
 
     /**
      * 由字符串生成加密key

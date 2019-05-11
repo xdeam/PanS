@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云盘</title>
+    <link href="../assert/btsp/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="left.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+   <style>
+       .shade{
+           width:100%;
+           height: 100%;
+           position: absolute;
+           top: 0px;
+           left: 0px;
+           display: none;
+
+       }
+       .wrap-ms-right{
+           list-style: none;
+           position: absolute;
+           top: 0;
+           left: 0;
+           padding: 5px 0;
+           min-width: 80px;
+           margin: 0;
+           display: none;
+           font-family: "微软雅黑";
+           font-size: 14px;
+           background-color: #fff;
+           border: 1px solid rgba(0, 0, 0, .15);
+           box-sizing: border-box;
+           border-radius: 4px;
+           -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+           -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+           -ms-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+           -o-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+       }
+       .ms-item{
+           height: 30px;
+           line-height: 30px;
+           text-align: center;
+           cursor: pointer;
+       }
+       .ms-item:hover{
+           background-color: #343a40;
+           color: #FFFFFF;
+       }
+
+   </style>
+
+        <div id="left" style="padding-left:0px;width: 100%;">   
+            <ul id="main-nav" class="nav nav-tabs nav-stacked" style="float: left;height:100%;">
+             
+                <li>
+                    <a href="#entspace" class="nav-header" data-toggle="collapse" aria-expanded="true">
+                        <i class="glyphicon glyphicon-cog"></i>
+                         企业空间
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="entspace" class="nav nav-list secondmenu collapse in" aria-expanded="true" style="">
+                        <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#myspace" class="nav-header collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-user"></i>
+                         个人文件
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="myspace" class="nav nav-list collapse secondmenu">
+                        <li><a href="#" onclick="loadMine()">我的</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#sharespace" class="nav-header collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-share"></i>
+                         分享的文件
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="sharespace" class="nav nav-list collapse secondmenu">
+                        <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- 收到的共享  -->
+                <li>
+                    <a href="#giftspace" class="nav-header collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-gift"></i>
+                         收到的分享
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="giftspace" class="nav nav-list collapse secondmenu">
+                        <li><a href="#"><i class="glyphicon glyphicon-picture"></i>图片</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-open-file"></i>文件</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th"></i>其他</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        
+
+ 
+    <script src="../assert/jquery-3.3.1.min.js"></script>
+    <script src="../assert/btsp/js/bootstrap.min.js"></script>
+    <script src="/main/left.js"></script>
+  <!--<script>refreshTopList()</script>-->
+  </body>
+</html>
+

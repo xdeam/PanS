@@ -1,0 +1,102 @@
+
+
+#right{
+    width: 20%;
+    position: fixed;
+    right:0px;
+    top:20px;
+   
+
+}
+#right .thumbnail  {
+    position:fixed;
+
+    /* overflow:auto; */
+    top:80px;
+    bottom:0px;
+
+}
+#inner{
+    width:100%;
+    height: 100%;
+}
+#right .btn{
+    border-radius: 2px;
+    width:80px;
+    margin: 5px;
+}
+#upload{
+    background:  linear-gradient(to bottom right, #33ccff , #3399ff); 
+    border:0px;
+
+}
+ .btn-group{
+    float: left;
+    
+}
+#right .btn-group>button{
+    border-color: #33ccff;
+    border-width: 0.6px;
+    color: #24b3e2;
+}
+#right .btn-group>button:hover{
+    color: #229bc4;
+    background-color: #c2d3e4;
+    border-color: #e5f0f3;
+}
+.btn-default.active.focus, .btn-default.active:focus, 
+.btn-default.active:hover, .btn-default:active.focus,
+ .btn-default:active:focus, .btn-default:active:hover,
+  .open>.dropdown-toggle.btn-default.focus, 
+  .open>.dropdown-toggle.btn-default:focus,
+   .open>.dropdown-toggle.btn-default:hover {
+    color: #229bc4;
+    background-color: #c1d6eb;
+    border-color: #24b3e2;
+    
+}
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    border-color: #24b3e2;
+    color: #229bc4;
+
+}
+
+.bttns{
+    position: relative;
+    
+}
+#right .table{
+    color: rgb(120, 166, 221);
+}
+
+
+#right .bg-primary {
+
+    color: #fff !important;
+    background-color: #20a8d8 !important;
+
+}
+#right ul.icons-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#right ul.icons-list li i {
+
+    display: block;
+    float: left;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 5px;
+    line-height: 30px !important;
+    text-align: center;
+
+}
+#right ol, #righ ul,#righ  dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+#right small{
+    color: gray;
+}

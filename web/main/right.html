@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云盘</title>
+
+    <link href="../assert/btsp/css/bootstrap.min.css" rel="stylesheet">
+    <link href="right.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="row" id="right">
+        <div class="col-sm-6 col-md-10">
+          <div class="thumbnail">
+          
+            <div class="caption" id="inner">
+            <p style="height:5%"> 
+
+            </p>
+             
+              <p>
+                  <div class="bttns">
+                        <a href="#" class="btn btn-primary" id="upload" role="button">上传</a>
+                        <!-- <a href="#" class="btn btn-default" role="button">新建</a> -->
+                        <div class="btn-group" style="float:right;">
+                               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 新建 <span class="caret"></span>
+                               </button>
+                               <ul class="dropdown-menu">
+                                <!-- <li><a href="#">文件</a></li>
+                            
+                                 <li role="separator" class="divider"></li>
+                                 -->
+                                   <li><a onclick="createfolder()" href="#">文件夹</a></li>
+                                   <li role="separator" class="divider"></li>
+                                   <li><a id="ncate" href="#">分类</a></li>
+                               </ul>
+                             </div>
+
+                  </div>
+                
+            </p>
+            <div  class="x">
+              
+                <hr class="mt-0">
+             <!-- <div class="uploadFilesBox" style="width:180px;">
+
+              </div>-->
+              
+              <h5 style="text-align: center" id="access_info"></h5>
+                <hr class="mt-0">
+                    <div id="accessPannel">
+                     <!--   <ul class="icons-list">
+                            <li>
+                                <i class="bg-primary img-circle">产</i>
+                                <div class="desc">
+                                    <div class="title">产品部</div>
+                                    <small>上传 下载</small>
+                                </div>
+
+                            </li>
+
+                        </ul>-->
+                    </div>
+                </div>
+            <!-- <table class="table table-hover">
+                    <thead>
+                      <tr>
+                       
+                        <th  >共享</th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                       
+                      </tr>
+                    </tbody>
+                  </table> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="../assert/jquery-3.3.1.min.js"></script>
+    <script src="../assert/btsp/js/bootstrap.min.js"></script>
+    <script src="/assert/layer/layer.js"></script>
+    <script src="/assert/cate.js"></script>
+
+    <!-- <script  src='../assert/verUpload/verUpload.js'></script> -->
+ 
+    <!-- <script src="right.js"></script> -->
+  <script>
+  
+    $(document.body).append("<script language='javascript' src='right.js'><\/script>");
+      right_init()
+  </script>
+  </body>
+</html>

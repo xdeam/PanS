@@ -1,0 +1,41 @@
+#share_con{
+    background:  linear-gradient(to bottom right, #33ccff , #3399ff); 
+    border:0px;
+}
+#close_model{
+    border-color: #33ccff;
+    border-width: 0.6px;
+    color: #24b3e2;
+}
+#close_model:hover{
+    color: #229bc4;
+    background-color: #c2d3e4;
+    border-color: #e5f0f3;
+}
+#btsgs{
+    position: relative;
+    float:right;   
+    margin-top: 20px;
+    padding-right: 5px;
+}
+/*.btn{*/
+    /*border-radius: 2px;*/
+    /*width:90px;*/
+    /*margin: 5px;*/
+/*}*/
+/*.btn-default.active.focus, .btn-default.active:focus,*/
+/*.btn-default.active:hover, .btn-default:active.focus,*/
+/*.btn-default:active:focus, .btn-default:active:hover,*/
+/*.open>.dropdown-toggle.btn-default.focus,*/
+/*.open>.dropdown-toggle.btn-default:focus,*/
+/*.open>.dropdown-toggle.btn-default:hover {*/
+    /*color: #229bc4;*/
+    /*background-color: #c1d6eb;*/
+    /*border-color: #24b3e2;*/
+
+/*}*/
+/*.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {*/
+    /*border-color: #24b3e2;*/
+    /*color: #229bc4;*/
+
+/*}*/

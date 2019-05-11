@@ -1,34 +1,36 @@
 package login.model;
 
-import org.springframework.stereotype.Component;
-import tk.mybatis.mapper.annotation.KeySql;
-import tk.mybatis.mapper.annotation.NameStyle;
-import tk.mybatis.mapper.code.Style;
+import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+/**
+ * user
+ * @author 
+ */
+public class User implements Serializable {
+    private Integer uid;
 
-@Component
-@Table(name = "user")
-@NameStyle(Style.normal)
-public class User {
-    @Id
-    @KeySql(useGeneratedKeys = true)
-    @Column(name = "uid")
-    int uid;
-    @Column(name = "uname")
-    String uname;
-    @Column(name = "passwd")
-    String passwd;
+    private String uname;
 
-    Dept dept;
+    private String passwd;
 
-    public int getUid() {
+    private Dept dept;
+    private Integer deptid;
+
+    public Integer getDeptid() {
+        return deptid;
+    }
+
+    public void setDeptid(Integer deptid) {
+        this.deptid = deptid;
+    }
+
+    private static final long serialVersionUID = 1L;
+
+    public Integer getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
     }
 
@@ -48,13 +50,25 @@ public class User {
         this.passwd = passwd;
     }
 
+    public Dept getDept() {
+        return dept;
+    }
+
+    public void setDept(Dept dept) {
+        this.dept = dept;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
-                "uid=" + uid +
-                ", uname='" + uname + '\'' +
-                ", passwd='" + passwd + '\'' +
-                ", dept=" + dept +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", uid=").append(uid);
+        sb.append(", uname=").append(uname);
+        sb.append(", passwd=").append(passwd);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
     }
 }

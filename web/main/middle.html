@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云盘</title>
+
+    <link href="../assert/btsp/css/bootstrap.min.css" rel="stylesheet">
+    <link href="middle.css" rel="stylesheet">
+      <link href="../assert/treelist.css" rel="stylesheet">
+      <link href="../assert/prompt.css" rel="stylesheet">
+  </head>
+  <body>
+   <div id="mi" style="min-height:300px;">
+
+   
+        <ol id="ng1" class="breadcrumb" style="background:white;">
+                <li><a href="#">企业空间</a></li>
+                <li><a href="#">产品</a></li>
+                <li class="active">2018</li>
+              </ol>
+    <hr>
+    <div class="slopt" style="margin-left:40px;">
+           <div class="btn-group" style="margin-right: 10px;overflow: visible">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    分类管理 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="createcate()" id="mncate">新建</a></li>
+
+                    <li role="separator" class="divider"></li>
+                    <li><a onclick="delcate()" href="#">删除</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a id="ncate" onclick="renamecate()" href="#">重命名</a></li>
+                </ul>
+            </div>
+
+
+            <button type="button" onclick="downButton()" class="btn btn-info">
+                下载
+            </button>
+            <button type="button" id="share2" class="btn btn-warning">
+                    分享
+             </button>
+             <button type="button" class="btn btn-success">
+                    移动
+                </button>
+                <button id="deletefile" type="button" class="btn btn-danger">
+                    删除
+                 </button>
+
+    </div>
+    <table id="filesx" class="table table-hover">
+         <thead>
+             <th><input type="checkbox" id="sall"> </th> <th>项目名称
+
+             </th> 
+             <th>修改/创建时间</th> <th>上传者</th> <th>所在目录</th>
+         </thead>
+         <tbody>
+             <tr>
+                 <td><input type="checkbox"></td>
+                   <td><div class="ics default"></div>
+                      <span class="txt">
+                         <a href="#">产品方案说明</a>
+                      </span> 
+                         <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                           
+                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                               </div></td> 
+                    <td>2019-3-14 8:38</td>  
+                    <td>我</td>
+                    <td>产品目录</td>
+             </tr>
+
+             <tr>
+                     <td><input type="checkbox"></td>
+                       <td><div class="ics folder"></div>
+                          <span class="txt">
+                             <a href="#">产品方案说明文件夹</a>
+                          </span> 
+                             <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                     <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                               
+                                     <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                   </div></td> 
+                        <td>2019-3-14 8:38</td>  
+                        <td>我</td>
+                        <td>产品目录</td>
+                 </tr>
+                 <tr>
+                         <td><input type="checkbox"></td>
+                           <td><div class="ics doc"></div>
+                              <span class="txt">
+                                 <a href="#">产品方案说明.doc</a>
+                              </span> 
+                                 <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                         <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                                   
+                                         <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                       </div></td> 
+                            <td>2019-3-14 8:38</td>  
+                            <td>我</td>
+                            <td>产品目录</td>
+                     </tr>
+                     <tr>
+                             <td><input type="checkbox"></td>
+                               <td><div class="ics ppt"></div>
+                                  <span class="txt">
+                                     <a href="#">产品方案说明.ppt</a>
+                                  </span> 
+                                     <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                                             <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+                                       
+                                             <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                                           </div></td> 
+                                <td>2019-3-14 8:38</td>  
+                                <td>我</td>
+                                <td>产品目录</td>
+                         </tr>
+     
+         </tbody>
+      </table> 
+   </div>
+     <script src="../assert/jquery-3.3.1.min.js"></script>
+   <script src="../assert/btsp/js/bootstrap.min.js"></script>
+  <!-- <script src="temp.js"></script>
+   <script src="time.js"></script>-->
+   <script src="/assert/layer/layer.js"></script>
+   <script src="middle.js"></script>
+
+
+    <script>
+        init()
+
+       loadFiles(1)
+       // uri.arr.push(new Array(1,"测试"))
+        //uri.show()
+    </script>
+    <script id="templ" type="text/html">
+        <tr>
+            <td><input id="file_%fileId%" type="checkbox"></td>
+            <td><div class="ics  %fileType%"></div>
+                <span class="txt">
+                         <a href="#">%fileName%</a>
+                      </span>
+                <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+                </div></td>
+            <td>%uploadTime%</td>
+            <td>%uploaderId%</td>
+            <td>%uri%</td>
+        </tr>
+    </script>
+   <script id="catetempl" type="text/html">
+       <tr>
+           <td><input id="folder_%categoryId%" type="checkbox"></td>
+           <td><div class="ics  folder"></div>
+               <span class="txt">
+                         <a href="#" onclick="folderClick('%categoryId%','%categoryName%')">%categoryName%</a>
+                      </span>
+               <div class="btn-group btn-group-xs options" role="group" aria-label="Extra-small button group">
+                   <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+
+                   <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+               </div></td>
+           <td>%createTime%</td>
+           <td>%autherUid%</td>
+           <td>%uri%</td>
+       </tr>
+   </script>
+
+   <script>
+
+
+       $('#share2').on('click', function(){
+           tcontent='\<\div style="padding:20px;">'+$("#content").html()+'\<\/div>'
+           layer.open({
+               type: 1,
+               area: ['600px', '360px'],
+               shadeClose: true, //点击遮罩关闭
+               title:"分享",
+               content: tcontent
+           });
+           initData();
+           $('#close_model').on('click', function(){
+
+               layer.closeAll()
+
+               // layer.open.content='\<\div style="padding:20px;">222\<\/div>'
+           });
+           // layer.open.content='\<\div style="padding:20px;">222\<\/div>'
+       });
+
+   </script>
+   <script type="text/html" id="content">
+       <div class="to__block">
+           <div class="to__left">
+               <div class="to__arrow"><span>←</span><span>→</span></div>
+               <div class="to__title">选择好友分享文件</div>
+               <div class="to__content" id="leftCont"></div>
+           </div>
+           <div class="to__right">
+               <div class="to__title">已选择</div>
+               <div class="to__content" id="rightCont"></div>
+           </div>
+       </div>
+
+       <div id="btsgs">
+           <a href="#" class="btn btn-primary" onclick="shareTj()" id="share_con" role="button">分享</a>
+           <a href="#" class="btn btn-default" id="close_model" role="button">关闭</a>
+
+       </div>
+   </script>
+
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: kwinter
+  Date: 2019/5/3
+  Time: 14:14
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+
+    <title>File Center</title>
+
+    <link href="../assert/btsp/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+<script src="../assert/jquery-3.3.1.min.js"></script>
+<script src="../assert/btsp/js/bootstrap.min.js"></script>
+<script src="../assert/include.js"></script>
+<script src="/assert/layer/layer.js"></script>
+<script src="middle.js"></script>
+<script src="left.js"></script>
+<script src="n.js"></script>
+
+<script src="/assert/cate.js"></script>
+
+<include src="top.html"></include>
+<div  class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <include src="left.html"></include>
+        </div>
+
+        <div class="col-md-8" style="width:800px;overflow-x:hidden;">
+            <include src="middle.html"></include>
+        </div>
+        <div class="col-md-2">
+            <include src="right.html"></include>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+#mi{
+  
+}
+#mi .options{
+    float: right;
+    visibility:hidden
+}
+#mi .breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+#mi .slopt button{
+    width:90px;
+    border-color: #33ccff;
+    border-width: 0.6px;
+    color: #24b3e2;
+    background: white;
+}
+.folder{
+    background-position: -594px -862px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+.default{
+    background-position: -596px -566px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+.pdf {
+    background-position: -596px -136px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+.doc,.docx {
+    background-position: -596px -170px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+.ppt {
+    background-position: -596px -204px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}.xsl ,xlsx{
+    background-position: -596px -238px;
+        background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+
+.picx,.jpg,.png{
+    background-position: -596px -306px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+.video{
+    background-position: -596px -1630px;
+    background-repeat: no-repeat;
+    background-image:  url(../assert/img/icons.png);
+}
+.ics{
+ 
+    display: block;
+    height: 26px;
+    width: 26px;
+    float: left;
+   
+}
+#mi td .txt{ 
+   text-indent: 20px;
+   line-height: 22px;
+    display: inline-block;
+    vertical-align: center;
+}
+
+#mi a{
+    text-decoration: none;
+}
+#mi a:hover,.a:focus{
+    color: #09AAFF;
+    text-decoration: none;
+}
+
+#mi a:active{
+  text-decoration: none;
+}

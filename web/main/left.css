@@ -1,0 +1,18 @@
+#entspace>li,#myspace>li,#sharespace>li,#giftspace>li{
+    padding-left: 20px;
+ 
+}
+#left a{
+    color: grey;
+}
+#left{
+    height: 100%;
+    padding: 20px;
+   
+}
+ul{
+    border: 0px;
+}
+.nav-tabs {
+    border-bottom: 0px;
+}
